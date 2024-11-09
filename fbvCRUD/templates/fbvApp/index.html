@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+</head>
+<body>
+    <h1>학생 목록</h1>
+    <table border="2">
+        <thead>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Test Score</th>
+        </thead>
+        {% for student in students %}
+        <tr>
+            <td>{{student.id}}</td>
+            <td>{{student.firstName}}</td>
+            <td>{{student.lastName}}</td>
+            <td>{{student.testScore}}</td>
+            <td><a href="/delete/{{student.id}}">삭제</a></td>
+            <td><a href="/update/{{student.id}}">업데이트</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <br>
+    <br>
+    <a href="/create">학생 등록</a>
+</body>
+</html>
