@@ -26,3 +26,4 @@ class StudentUpdateView(UpdateView):
 class StudentDeleteView(DeleteView):
     model = Student
     success_url=reverse_lazy('students')
+ 

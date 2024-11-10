@@ -10,6 +10,8 @@ def pageCount(request):
 
 
 def index(request):
+    request.session.set_expiry(180)
+    del request.session['count']
     return render(request,'sessionApp/index.html')
 
 def addItem(request):

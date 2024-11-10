@@ -9,5 +9,7 @@
     <h1>Welcome to my shoopping cart</h1>
     <a href="/addItem">Add Item</a>
     <a href="/displayItems">Display Cart</a>
+    <br><b>Session Expiry Time In Second : {{request.session.get_expiry_age}}</b></br>
+    <br><b>Session Expiry Date : {{request.session.get_expiry_date}}</b></br>
 </body>
 </html>
