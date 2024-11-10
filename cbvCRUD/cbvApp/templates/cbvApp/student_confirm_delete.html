@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends "cbvApp/base.html" %}
+{% block body_block %}
+    <h2>학생 정보 삭제 {{student.firstName}} ? </h2>
+    <form action="" method="post">
+        <input type="submit" value="확인">
+        <a href="/{{student.id}}">취소</a>
+        {% csrf_token %}
+    </form>
+{% endblock body_block %}
