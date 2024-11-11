@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-2u(j(!p%ku5eg8h=o0&-1h3k3ukg7mfgdrl2-ox%3+$dbcxs2u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -79,8 +79,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'clinicalsdb',
-        'USER' : 'root',
-        'PASSWORD' : '1234'
+        'USER': 'root',
+        'PASSWORD': 'test1234',
+        'HOST': 'docker-mysql',  # MySQL 컨테이너 이름
+        'PORT': '3306',          # MySQL 기본 포트
     }
 }
 
